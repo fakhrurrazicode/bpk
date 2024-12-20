@@ -103,7 +103,11 @@ export default function Index({ auth, request, klasifikasiCagarBudaya }) {
                                                         </div>
                                                     </th>
                                                     <td>{row.nama}</td>
-                                                    <td>{row.deskripsi}</td>
+                                                    <td
+                                                        dangerouslySetInnerHTML={{
+                                                            __html: row.deskripsi,
+                                                        }}
+                                                    ></td>
                                                     <td>{row.created_at}</td>
                                                     <td>{row.updated_at}</td>
                                                 </tr>
